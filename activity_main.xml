@@ -1,0 +1,128 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/ngoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:accessibilityLiveRegion="polite"
+        android:background="@drawable/custom_edittext"
+        android:contentDescription="Enter NGO Name"
+        android:drawableLeft="@drawable/ic_baseline_business_24"
+        android:drawablePadding="8dp"
+        android:hint="NGO Name"
+        android:importantForAccessibility="yes"
+        android:minHeight="?attr/listPreferredItemHeight"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="EditableContentDescCheck" />
+
+    <ImageButton
+        android:id="@+id/uploadLogoButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_baseline_add_photo_alternate_24"
+        android:importantForAccessibility="no"
+        android:contentDescription="Upload Logo"
+        app:layout_constraintEnd_toEndOf="@id/ngoName"
+        app:layout_constraintTop_toBottomOf="@id/ngoName" />
+
+    <TextView
+        android:id="@+id/descriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/lavender"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/ngoName"
+        app:layout_constraintTop_toBottomOf="@id/uploadLogoButton" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:accessibilityLiveRegion="polite"
+        android:background="@drawable/custom_edittext"
+        android:importantForAccessibility="yes"
+        android:minHeight="?attr/listPreferredItemHeight"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionLabel"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/eventsDescriptionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Events"
+            android:textColor="@color/lavender"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:importantForAccessibility="yes"
+            android:accessibilityLiveRegion="polite"
+            android:contentDescription="Enter Date of Events" />
+
+        <EditText
+            android:id="@+id/eventsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:accessibilityLiveRegion="polite"
+            android:background="@drawable/custom_edittext"
+            android:contentDescription="Enter Event Description"
+            android:importantForAccessibility="yes"
+            android:minHeight="?attr/listPreferredItemHeight"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            tools:ignore="EditableContentDescCheck" />
+
+        <ImageButton
+            android:id="@+id/uploadPicturesButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+            android:importantForAccessibility="no"
+            android:contentDescription="Upload Pictures" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:importantForAccessibility="yes"
+        android:accessibilityLiveRegion="polite"
+        android:contentDescription="Submit Form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
